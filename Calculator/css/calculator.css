@@ -1,0 +1,39 @@
+td {
+    background-color: rgba(98, 88, 194, 0.653);
+}
+
+button{
+    width: 100%;
+    height: 100%;
+}
+
+table{
+    border: 1px solid black;
+    height: 200px;
+    width: 250px;
+    background-color: rgba(41, 59, 102, 0.575);
+}
+
+#calc-field {
+    height: 80%;
+    width: 96%;
+    text-align: right;
+}
+
+#calc-heading {
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    width: 240px;
+    text-align: center;
+    padding: 10px;
+}
+
+#maindiv{
+    border: 5px solid rgb(8, 6, 70);
+    position: relative;
+    width: 250px;
+    height: 313px;
+    top: 100px;
+    left: 450px;
+}

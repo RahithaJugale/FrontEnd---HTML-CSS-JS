@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row mainrow">
+                <div class="col-4">
+                    <form class="pe-4" action="../html/home.html">
+                        <div class="row headingrow text-white">
+                            <h2>Login</h2>
+                        </div>
+                        <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <label class="form-label"><img id="userlogo" class="rounded" src="../images/username.jpg" alt="username"></label>
+                                </div>
+                                <div class="col-md">
+                                    <input type="text" class="form-control" placeholder="Enter Username" id="myname" required>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-2">
+                                    <label class="form-label"><img id="passlogo" class="rounded" src="../images/password.png" alt="password"></label>
+                                </div>
+                                <div class="col-md">
+                                    <input type="password" class="form-control" placeholder=" Enter Password" id="mypass" required>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-1 ms-3">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="col-5">
+                                    <p>Remember Me</p>
+                                </div>
+                                <div class="col-5 ms-3">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div class="row mt-4 mb-4 ms-5 me-5">
+                                <button class="btn btn-default bg-primary mt-2 mb-4 mybtn text-white" type="submit" id="formlogin">Login</button>
+                            </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

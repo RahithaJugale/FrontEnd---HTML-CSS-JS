@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/calculator.css">
+    </head>
+    <body>
+        <div id="maindiv">
+            <div id = "calc-heading">
+                <h2>CALCULATOR</h2>
+            </div>
+            <div id="calc-div">
+                <table class="table">
+                    <tr>
+                        <td><button value="C" onclick="handleClick(this.value)">C</button></td>
+                        <td colspan="3"><input type="text" id="calc-field"></td>
+                    </tr>
+                    <tr>
+                        <td><button value="+" onclick="handleClick(this.value)">+</button></td>
+                        <td><button value="1" onclick="handleClick(this.value)">1</button></td>
+                        <td><button value="2" onclick="handleClick(this.value)">2</button></td>
+                        <td><button value="3" onclick="handleClick(this.value)">3</button></td>
+                    </tr>
+                    <tr>
+                        <td><button value="-" onclick="handleClick(this.value)">-</button></td>
+                        <td><button value="4" onclick="handleClick(this.value)">4</button></td>
+                        <td><button value="5" onclick="handleClick(this.value)">5</button></td>
+                        <td><button value="6" onclick="handleClick(this.value)">6</button></td>
+                    </tr>
+                    <tr>
+                        <td><button value="*" onclick="handleClick(this.value)">*</button></td>
+                        <td><button value="7" onclick="handleClick(this.value)">7</button></td>
+                        <td><button value="8" onclick="handleClick(this.value)">8</button></td>
+                        <td><button value="9" onclick="handleClick(this.value)">9</button></td>
+                    </tr>
+                    <tr>
+                        <td><button value="/" onclick="handleClick(this.value)">/</button></td>
+                        <td><button value="." onclick="handleClick(this.value)">.</button></td>
+                        <td><button value="0" onclick="handleClick(this.value)">0</button></td>
+                        <td><button value="=" onclick="handleClick(this.value)">=</button></td>
+                    </tr>
+                </table>
+            </div>
+            <p id="perror"></p>
+        </div>
+    </body>
+    <script src="./js/calculator.js"></script>
+</html>

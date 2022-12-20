@@ -1,0 +1,41 @@
+.navigation>ul{
+    list-style: none;
+}
+
+li{
+    padding: 20px;
+}
+
+.nav-col{
+    background-color: rgba(20, 68, 116);
+    padding-top: 40px;
+    height: 620px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li:hover{
+    background-color: rgb(99, 126, 179);
+}
+
+a:hover{
+    color: black;
+}
+
+h2{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.logout{
+    margin-top: 14px;
+}
+
+#logoutimg{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}

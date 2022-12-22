@@ -1,0 +1,90 @@
+//defining interface
+interface IPayload{
+    //declaring variables
+    massKg: number;
+}
+
+//class definitions
+//Astronaut class
+class Astronaut implements IPayload{
+
+    //instance variables
+    massKg: number = 0;
+    name: string = '';
+
+    //constructor
+    constructor(massKg:number, name:string){
+        this.massKg = massKg;
+        this.name = name;
+    }
+}
+
+//Cargo class
+class Cargo implements IPayload{
+
+    //instance variables
+    massKg: number = 0;
+    material: string = '';
+
+    //constructor
+    constructor(massKg:number, material:string){
+        this.massKg = massKg;
+        this.material = material;
+    }
+}
+
+//Rocket class
+class Rocket{
+
+    //instance variables
+    name:string = '';
+    totalCapacityKg:number = 0;
+    cargoItems:Array<Cargo> = [];
+    astronauts:Array<Astronaut> = [];
+
+    //constructor
+    constructor(name:string, totalCapacityKg:number){
+        this.name = name;
+        this.totalCapacityKg = totalCapacityKg;
+    }
+
+    //custom methods
+    sumMass(items:IPayload[]):number{
+        let sum : number = 0;
+        items.forEach(i => {
+            sum += i.massKg;
+        });
+        return sum;
+    }
+
+    currentMassKg():number{
+        return (this.sumMass(this.astronauts))+(this.sumMass(this.cargoItems));
+    }
+
+
+    canAdd(item:IPayload):boolean{
+        if((this.currentMassKg() + item.massKg) <= this.totalCapacityKg){
+            return true;
+        }
+        return false;
+    }
+
+    //Uses this.canAdd() to see if another item can be added.If true, adds cargo to this.cargoItems and returns true.
+    addCargo(cargo: Cargo): boolean{
+        if(this.canAdd(cargo)){
+            this.cargoItems.push(cargo);
+            return true;
+        }
+        return false;
+    }
+
+    //Uses this.canAdd() to see if another astronaut can be added.If true, adds astronaut to this.astronauts and returns true.
+
+    addAstronaut(astronaut: Astronaut): boolean{
+        if(this.canAdd(astronaut)){
+            this.astronauts.push(astronaut);
+            return true;
+        }
+        return false;
+    }
+}
